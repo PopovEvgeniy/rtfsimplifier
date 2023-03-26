@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023.03.26 17:49:11.885.bdsproj,C:\Users\Евгений\Documents\Borland Studio Projects\Project1.bdsproj=D:\Образ\RTF2TXT\Version 0.7.2\rtf2txt\source\rtf2txt.bdsproj</Transaction>
+    <Transaction>2023.03.26 20:55:54.983.bdsproj,D:\Образ\Rtf simplifier\Version 0.8.1\rtfsimplifier\source\rtf2txt.bdsproj=D:\Образ\Rtf simplifier\Version 0.8.1\rtfsimplifier\source\rtfsimplifier.bdsproj</Transaction>
+    <Transaction>2023.03.26 20:56:08.042.pas,D:\Образ\Rtf simplifier\Version 0.8.1\rtfsimplifier\source\rtf2txtcode.pas=D:\Образ\Rtf simplifier\Version 0.8.1\rtfsimplifier\source\rtfsimplifiercode.pas</Transaction>
+    <Transaction>2023.03.26 20:56:08.042.dfm,D:\Образ\Rtf simplifier\Version 0.8.1\rtfsimplifier\source\rtf2txtcode.dfm=D:\Образ\Rtf simplifier\Version 0.8.1\rtfsimplifier\source\rtfsimplifiercode.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
