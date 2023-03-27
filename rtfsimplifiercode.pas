@@ -31,7 +31,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Rtf simplifier';
- Form1.Caption:='Rtf simplifier 0.8.2';
+ Form1.Caption:='Rtf simplifier 0.8.4';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -76,7 +76,7 @@ end;
 function get_name(source:string):string;
 var amount:LongWord;
 begin
- amount:=Pos('.',source);
+ amount:=LastDelimiter('.',source);
  if amount=0 then
  begin
   amount:=Length(source);
@@ -124,7 +124,12 @@ end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
+ Form1.Button1.Enabled:=False;
+ Form1.Button2.Enabled:=False;
+ Form1.StatusBar1.SimpleText:='Working... Please wait';
  Form1.StatusBar1.SimpleText:='Amount of converted files: '+IntToStr(batch_convert(Form1.RichEdit1,Form1.LabeledEdit1.Text));
+ Form1.Button1.Enabled:=True;
+ Form1.Button2.Enabled:=True;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);

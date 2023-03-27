@@ -1,6 +1,6 @@
                                  Rtf simplifier
 
-                                  Version 0.8.2
+                                  Version 0.8.4
 
                          This software made by Popov Evgeniy Alekseyevich
 
@@ -33,4 +33,5 @@ Change log
 0.7.9 - Stable release.
 0.8 - Small bug fixed.
 0.8.1 - Project name changed.
-0.8.2 - Small changes.
+0.8.2 - 0.8.3 - Small changes.
+0.8.4 - User interface improved.

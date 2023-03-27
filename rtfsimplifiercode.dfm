@@ -20,8 +20,6 @@ object Form1: TForm1
     Width = 365
     Height = 19
     Panels = <>
-    ExplicitTop = 151
-    ExplicitWidth = 359
   end
   object LabeledEdit1: TLabeledEdit
     Left = 147
