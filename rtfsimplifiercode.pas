@@ -4,18 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, ComCtrls, FileCtrl;
+  Dialogs, StdCtrls, ComCtrls, ExtCtrls, FileCtrl;
 
 type
   TForm1 = class(TForm)
     StatusBar1: TStatusBar;
-    RichEdit1: TRichEdit;
     LabeledEdit1: TLabeledEdit;
     Button1: TButton;
     Button2: TButton;
+    RichEdit1: TRichEdit;
     procedure FormCreate(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
     procedure LabeledEdit1Change(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
@@ -31,7 +31,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Rtf simplifier';
- Form1.Caption:='Rtf simplifier 0.8.1';
+ Form1.Caption:='Rtf simplifier 0.8.2';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -92,10 +92,10 @@ function convert_rtf(var convertor:TRichEdit;source:string):boolean;
 var target:string;
 begin
  target:=get_name(source)+'.txt';
- Form1.RichEdit1.PlainText:=False;
+ convertor.PlainText:=False;
  convertor.Lines.Clear();
  convertor.Lines.LoadFromFile(source);
- Form1.RichEdit1.PlainText:=True;
+ convertor.PlainText:=True;
  convertor.Lines.SaveToFile(target);
  convert_rtf:=FileExists(target);
 end;
@@ -139,7 +139,7 @@ begin
   Form1.Button2.Enabled:=True;
   Form1.StatusBar1.SimpleText:='Ready';
  end;
-
+ 
 end;
 
 end.
