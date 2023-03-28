@@ -1,12 +1,12 @@
                                  Rtf simplifier
 
-                                  Version 0.8.5
+                                  Version 0.8.6
 
                          This software made by Popov Evgeniy Alekseyevich
 
 System requirement
 
-Windows 2000 or higher
+Windows 7(Service Pack 1 or higher) or higher
 
 Program description
 
@@ -23,7 +23,7 @@ You can send me a letter to tuzik87@inbox.ru
 About program modification
 
 Source code included in source.zip archive.
-It compiled under Turbo Delphi 2006 Explorer.
+It compiled under Delphi 10.4.2 Sydney Community Edition.
 
 Change log
 
@@ -36,3 +36,4 @@ Change log
 0.8.2 - 0.8.3 - Small changes.
 0.8.4 - User interface improved.
 0.8.5 - Small changes.
+0.8.6 - Source code recompiled under Delphi 10.4.2 Sydney Community Edition.

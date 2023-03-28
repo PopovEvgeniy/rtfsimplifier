@@ -55,11 +55,18 @@ object Form1: TForm1
     Top = 104
     Width = 19
     Height = 25
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
     Lines.Strings = (
       'Ri'
       'ch'
       'Ed'
       'it1')
+    ParentFont = False
     TabOrder = 4
+    Zoom = 100
   end
 end

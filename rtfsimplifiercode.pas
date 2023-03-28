@@ -31,7 +31,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Rtf simplifier';
- Form1.Caption:='Rtf simplifier 0.8.5';
+ Form1.Caption:='Rtf simplifier 0.8.6';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
