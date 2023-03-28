@@ -31,7 +31,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Rtf simplifier';
- Form1.Caption:='Rtf simplifier 0.8.4';
+ Form1.Caption:='Rtf simplifier 0.8.5';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -105,10 +105,10 @@ var amount:LongWord;
 var search:TSearchRec;
 begin
  amount:=0;
- if FindFirst(directory+'\'+'*.rtf',faAnyFile,search)=0 then
+ if FindFirst(directory+PathDelim+'*.rtf',faAnyFile,search)=0 then
  begin
   repeat
-   if convert_rtf(convertor,directory+'\'+search.Name)=True then Inc(amount);
+   if convert_rtf(convertor,directory+PathDelim+search.Name)=True then Inc(amount);
   until FindNext(search)<>0;
   FindClose(search);
  end;
