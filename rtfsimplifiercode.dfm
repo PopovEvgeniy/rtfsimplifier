@@ -2,39 +2,39 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Rtf simplifier'
-  ClientHeight = 162
-  ClientWidth = 365
+  ClientHeight = 180
+  ClientWidth = 393
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 143
-    Width = 365
+    Top = 161
+    Width = 393
     Height = 19
     Panels = <>
   end
   object LabeledEdit1: TLabeledEdit
-    Left = 147
-    Top = 58
-    Width = 121
+    Left = 158
+    Top = 26
+    Width = 131
     Height = 21
     EditLabel.Width = 78
-    EditLabel.Height = 13
+    EditLabel.Height = 21
     EditLabel.Caption = 'Target directory'
+    LabelPosition = lpLeft
     TabOrder = 1
+    Text = ''
     OnChange = LabeledEdit1Change
   end
   object Button1: TButton
-    Left = 282
-    Top = 56
+    Left = 306
+    Top = 24
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -43,7 +43,7 @@ object Form1: TForm1
   end
   object Button2: TButton
     Left = 158
-    Top = 104
+    Top = 115
     Width = 75
     Height = 25
     Caption = 'Convert'
@@ -51,8 +51,8 @@ object Form1: TForm1
     OnClick = Button2Click
   end
   object RichEdit1: TRichEdit
-    Left = 254
-    Top = 104
+    Left = 249
+    Top = 117
     Width = 19
     Height = 25
     Font.Charset = RUSSIAN_CHARSET
@@ -67,6 +67,13 @@ object Form1: TForm1
       'it1')
     ParentFont = False
     TabOrder = 4
-    Zoom = 100
+  end
+  object CheckBox1: TCheckBox
+    Left = 8
+    Top = 72
+    Width = 373
+    Height = 17
+    Caption = 'Delete source document after conversion'
+    TabOrder = 5
   end
 end

@@ -1,6 +1,6 @@
                                  Rtf simplifier
 
-                                  Version 0.8.6
+                                  Version 0.8.9
 
                          This software made by Popov Evgeniy Alekseyevich
 
@@ -23,7 +23,7 @@ You can send me a letter to tuzik87@inbox.ru
 About program modification
 
 Source code included in source.zip archive.
-It compiled under Delphi 10.4.2 Sydney Community Edition.
+It compiled under Delphi 11.3 Community Edition.
 
 Change log
 
@@ -37,3 +37,6 @@ Change log
 0.8.4 - User interface improved.
 0.8.5 - Small changes.
 0.8.6 - Source code recompiled under Delphi 10.4.2 Sydney Community Edition.
+0.8.7 - File processing improved.
+0.8.8 - User interface improved.
+0.8.9 - Small changes.
