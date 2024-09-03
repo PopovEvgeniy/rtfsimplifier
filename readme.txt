@@ -1,8 +1,8 @@
                                  Rtf simplifier
 
-                                  Version 0.8.9.1
+                                  Version 0.8.9.2
 
-                         This software made by Popov Evgeniy Alekseyevich
+                         This software was made by Popov Evgeniy Alekseyevich
 
 System requirement
 
@@ -10,20 +10,20 @@ Windows 7 (Service Pack 1 or higher) or higher
 
 Program description
 
-Rtf simplifier is the batch convertor for Rich Text Format documents. It let you convert these documents to plain text files.
+Rtf simplifier is the batch converter for Rich Text Format documents. It let you convert these documents to plain text files.
 
 License
 
-This program distributed under GNU GENERAL PUBLIC LICENSE.
+This program is distributed under GNU GENERAL PUBLIC LICENSE.
 
 Contact
 
-You can send me a letter to tuzik87@inbox.ru
+You can send me a letter to tuzik87@inbox.ru.
 
 About program modification
 
-Source code included in the source.zip archive.
-It compiled under Delphi 11.3 Community Edition.
+Source code is included in the source.zip archive.
+It was compiled under Delphi 11.3 Community Edition.
 
 Change log
 
@@ -40,4 +40,4 @@ Change log
 0.8.7 — File processing improved.
 0.8.8 — User interface improved.
 0.8.9 — Small changes.
-0.8.9.1 — Documentation updated.
+0.8.9.1 — 0.8.9.2 — Documentation updated.
