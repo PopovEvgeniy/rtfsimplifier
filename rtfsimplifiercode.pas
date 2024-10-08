@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ComCtrls, ExtCtrls, FileCtrl, Vcl.Mask;
+  Dialogs, StdCtrls, ComCtrls, ExtCtrls, FileCtrl;
 
 type
   TForm1 = class(TForm)
@@ -32,7 +32,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Rtf simplifier';
- Form1.Caption:='Rtf simplifier 0.8.9';
+ Form1.Caption:='Rtf simplifier 0.9';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -57,8 +57,8 @@ begin
  Form1.Button1.Caption:='Select';
  Form1.Button2.Caption:='Convert';
  Form1.LabeledEdit1.EditLabel.Caption:='Target directory';
- Form1.CheckBox1.Caption:='Delete source document after conversion';
- Form1.StatusBar1.SimpleText:='Please select target directory';
+ Form1.CheckBox1.Caption:='Delete the source document after conversion';
+ Form1.StatusBar1.SimpleText:='Please select the target directory';
 end;
 
 procedure setup();
@@ -145,7 +145,7 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
- Form1.LabeledEdit1.Text:=get_directory('Select target directory');
+ Form1.LabeledEdit1.Text:=get_directory('Select the target directory');
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -153,7 +153,7 @@ begin
  Form1.Button1.Enabled:=False;
  Form1.Button2.Enabled:=False;
  Form1.StatusBar1.SimpleText:='Working... Please wait';
- Form1.StatusBar1.SimpleText:='Amount of converted files: '+IntToStr(batch_convert(Form1.RichEdit1,Form1.LabeledEdit1.Text,Form1.CheckBox1.Checked));
+ Form1.StatusBar1.SimpleText:='Amount of the converted files: '+IntToStr(batch_convert(Form1.RichEdit1,Form1.LabeledEdit1.Text,Form1.CheckBox1.Checked));
  Form1.Button1.Enabled:=True;
  Form1.Button2.Enabled:=True;
 end;

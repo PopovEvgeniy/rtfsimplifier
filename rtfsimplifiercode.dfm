@@ -3,21 +3,24 @@ object Form1: TForm1
   Top = 0
   Caption = 'Rtf simplifier'
   ClientHeight = 180
-  ClientWidth = 393
+  ClientWidth = 442
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  OldCreateOrder = True
   OnCreate = FormCreate
+  PixelsPerInch = 96
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
     Top = 161
-    Width = 393
+    Width = 442
     Height = 19
     Panels = <>
+    ExplicitWidth = 393
   end
   object LabeledEdit1: TLabeledEdit
     Left = 158
@@ -25,11 +28,10 @@ object Form1: TForm1
     Width = 131
     Height = 21
     EditLabel.Width = 78
-    EditLabel.Height = 21
+    EditLabel.Height = 13
     EditLabel.Caption = 'Target directory'
     LabelPosition = lpLeft
     TabOrder = 1
-    Text = ''
     OnChange = LabeledEdit1Change
   end
   object Button1: TButton
@@ -71,9 +73,9 @@ object Form1: TForm1
   object CheckBox1: TCheckBox
     Left = 8
     Top = 72
-    Width = 373
+    Width = 425
     Height = 17
-    Caption = 'Delete source document after conversion'
+    Caption = 'Delete the source document after conversion'
     TabOrder = 5
   end
 end
