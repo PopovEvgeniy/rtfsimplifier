@@ -2,12 +2,12 @@ program rtfsimplifier;
 
 uses
   Forms,
-  rtfsimplifiercode in 'rtfsimplifiercode.pas' {Form1};
+  rtfsimplifiercode in 'rtfsimplifiercode.pas' {MainWindow};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TMainWindow, MainWindow);
   Application.Run;
 end.

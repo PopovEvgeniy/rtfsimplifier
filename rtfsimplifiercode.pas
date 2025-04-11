@@ -7,58 +7,57 @@ uses
   Dialogs, StdCtrls, ComCtrls, ExtCtrls, FileCtrl;
 
 type
-  TForm1 = class(TForm)
-    StatusBar1: TStatusBar;
-    LabeledEdit1: TLabeledEdit;
-    Button1: TButton;
-    Button2: TButton;
-    RichEdit1: TRichEdit;
-    CheckBox1: TCheckBox;
+  TMainWindow = class(TForm)
+    OperationStatus: TStatusBar;
+    DirectoryField: TLabeledEdit;
+    SelectButton: TButton;
+    ConvertButton: TButton;
+    RtfConverter: TRichEdit;
+    DeleteCheckBox: TCheckBox;
     procedure FormCreate(Sender: TObject);
-    procedure LabeledEdit1Change(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure DirectoryFieldChange(Sender: TObject);
+    procedure SelectButtonClick(Sender: TObject);
+    procedure ConvertButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
   end;
 
-var
-  Form1: TForm1;
+var MainWindow: TMainWindow;
 
 implementation
 
 procedure window_setup();
 begin
  Application.Title:='Rtf simplifier';
- Form1.Caption:='Rtf simplifier 0.9';
- Form1.BorderStyle:=bsDialog;
- Form1.Font.Name:=Screen.MenuFont.Name;
- Form1.Font.Size:=14;
+ MainWindow.Caption:='Rtf simplifier 0.9.1';
+ MainWindow.BorderStyle:=bsDialog;
+ MainWindow.Font.Name:=Screen.MenuFont.Name;
+ MainWindow.Font.Size:=14;
 end;
 
 procedure interface_setup();
 begin
- Form1.RichEdit1.Enabled:=False;
- Form1.RichEdit1.Visible:=False;
- Form1.Button1.ShowHint:=False;
- Form1.Button2.ShowHint:=False;
- Form1.Button2.Enabled:=False;
- Form1.LabeledEdit1.Enabled:=False;
- Form1.CheckBox1.Checked:=False;
- Form1.StatusBar1.SimplePanel:=True;
- Form1.LabeledEdit1.LabelPosition:=lpLeft;
- Form1.LabeledEdit1.Text:='';
+ MainWindow.RtfConverter.Enabled:=False;
+ MainWindow.RtfConverter.Visible:=False;
+ MainWindow.SelectButton.ShowHint:=False;
+ MainWindow.ConvertButton.ShowHint:=False;
+ MainWindow.ConvertButton.Enabled:=False;
+ MainWindow.DirectoryField.Enabled:=False;
+ MainWindow.DeleteCheckBox.Checked:=False;
+ MainWindow.OperationStatus.SimplePanel:=True;
+ MainWindow.DirectoryField.LabelPosition:=lpLeft;
+ MainWindow.DirectoryField.Text:='';
 end;
 
 procedure language_setup();
 begin
- Form1.Button1.Caption:='Select';
- Form1.Button2.Caption:='Convert';
- Form1.LabeledEdit1.EditLabel.Caption:='Target directory';
- Form1.CheckBox1.Caption:='Delete the source document after conversion';
- Form1.StatusBar1.SimpleText:='Please select the target directory';
+ MainWindow.SelectButton.Caption:='Select';
+ MainWindow.ConvertButton.Caption:='Convert';
+ MainWindow.DirectoryField.EditLabel.Caption:='Target directory';
+ MainWindow.DeleteCheckBox.Caption:='Delete the source document after conversion';
+ MainWindow.OperationStatus.SimpleText:='Please select the target directory';
 end;
 
 procedure setup();
@@ -143,32 +142,32 @@ end;
 
 {$R *.dfm}
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TMainWindow.SelectButtonClick(Sender: TObject);
 begin
- Form1.LabeledEdit1.Text:=get_directory('Select the target directory');
+ MainWindow.DirectoryField.Text:=get_directory('Select the target directory');
 end;
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TMainWindow.ConvertButtonClick(Sender: TObject);
 begin
- Form1.Button1.Enabled:=False;
- Form1.Button2.Enabled:=False;
- Form1.StatusBar1.SimpleText:='Working... Please wait';
- Form1.StatusBar1.SimpleText:='Amount of the converted files: '+IntToStr(batch_convert(Form1.RichEdit1,Form1.LabeledEdit1.Text,Form1.CheckBox1.Checked));
- Form1.Button1.Enabled:=True;
- Form1.Button2.Enabled:=True;
+ MainWindow.SelectButton.Enabled:=False;
+ MainWindow.ConvertButton.Enabled:=False;
+ MainWindow.OperationStatus.SimpleText:='Working... Please wait';
+ MainWindow.OperationStatus.SimpleText:='Amount of the converted files: '+IntToStr(batch_convert(MainWindow.RtfConverter,MainWindow.DirectoryField.Text,MainWindow.DeleteCheckBox.Checked));
+ MainWindow.SelectButton.Enabled:=True;
+ MainWindow.ConvertButton.Enabled:=True;
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);
+procedure TMainWindow.FormCreate(Sender: TObject);
 begin
  setup();
 end;
 
-procedure TForm1.LabeledEdit1Change(Sender: TObject);
+procedure TMainWindow.DirectoryFieldChange(Sender: TObject);
 begin
- if Form1.LabeledEdit1.Text<>'' then
+ if MainWindow.DirectoryField.Text<>'' then
  begin
-  Form1.Button2.Enabled:=True;
-  Form1.StatusBar1.SimpleText:='Ready';
+  MainWindow.ConvertButton.Enabled:=True;
+  MainWindow.OperationStatus.SimpleText:='Ready';
  end;
  
 end;

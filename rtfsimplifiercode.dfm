@@ -1,4 +1,4 @@
-object Form1: TForm1
+object MainWindow: TMainWindow
   Left = 0
   Top = 0
   Caption = 'Rtf simplifier'
@@ -14,15 +14,14 @@ object Form1: TForm1
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object StatusBar1: TStatusBar
+  object OperationStatus: TStatusBar
     Left = 0
     Top = 161
     Width = 442
     Height = 19
     Panels = <>
-    ExplicitWidth = 393
   end
-  object LabeledEdit1: TLabeledEdit
+  object DirectoryField: TLabeledEdit
     Left = 158
     Top = 26
     Width = 131
@@ -32,27 +31,27 @@ object Form1: TForm1
     EditLabel.Caption = 'Target directory'
     LabelPosition = lpLeft
     TabOrder = 1
-    OnChange = LabeledEdit1Change
+    OnChange = DirectoryFieldChange
   end
-  object Button1: TButton
+  object SelectButton: TButton
     Left = 306
     Top = 24
     Width = 75
     Height = 25
     Caption = 'Select'
     TabOrder = 2
-    OnClick = Button1Click
+    OnClick = SelectButtonClick
   end
-  object Button2: TButton
+  object ConvertButton: TButton
     Left = 158
     Top = 115
     Width = 75
     Height = 25
     Caption = 'Convert'
     TabOrder = 3
-    OnClick = Button2Click
+    OnClick = ConvertButtonClick
   end
-  object RichEdit1: TRichEdit
+  object RtfConverter: TRichEdit
     Left = 249
     Top = 117
     Width = 19
@@ -70,7 +69,7 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 4
   end
-  object CheckBox1: TCheckBox
+  object DeleteCheckBox: TCheckBox
     Left = 8
     Top = 72
     Width = 425
