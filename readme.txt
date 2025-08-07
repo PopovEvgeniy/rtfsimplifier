@@ -1,6 +1,6 @@
                                  Rtf simplifier
 
-                                  Version 0.9.1
+                                  Version 0.9.1.1
 
                          This software was made by Popov Evgeniy Alekseyevich
 
@@ -14,11 +14,7 @@ Rtf simplifier is the batch converter for Rich Text Format documents. It lets yo
 
 License
 
-This program is distributed under GNU GENERAL PUBLIC LICENSE.
-
-Contact
-
-You can send me a letter at tuzik87@inbox.ru.
+This program is distributed under the GNU GENERAL PUBLIC LICENSE.
 
 About program modification
 
@@ -44,3 +40,4 @@ Change log
 0.9: The small changes.
 0.9.0.1-0.9.0.2: The documentation has been updated.
 0.9.1: The source code was recompiled under Turbo Delphi 2006 Explorer.
+0.9.1.1: The documentation has been updated.
