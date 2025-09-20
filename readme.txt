@@ -1,27 +1,27 @@
                                  Rtf simplifier
 
-                                  Version 0.9.1.1
+                                  Version 0.9.1.2
 
                          This software was made by Popov Evgeniy Alekseyevich
 
-System requirements
+System requirements.
 
 Windows 2000 or higher
 
-Program description
+The program description.
 
-Rtf simplifier is the batch converter for Rich Text Format documents. It lets you convert these documents to plain text files.
+This program is the batch converter for Rich Text Format documents. It lets you convert these documents to plain text files.
 
-License
+License.
 
 This program is distributed under the GNU GENERAL PUBLIC LICENSE.
 
-About program modification
+The source code.
 
 The code is included in the source.zip archive.
 It was compiled under Turbo Delphi 2006 Explorer.
 
-Change log
+Version history.
 
 0.1: The initial version.
 0.2-0.7.1: The old branch.
@@ -40,4 +40,4 @@ Change log
 0.9: The small changes.
 0.9.0.1-0.9.0.2: The documentation has been updated.
 0.9.1: The source code was recompiled under Turbo Delphi 2006 Explorer.
-0.9.1.1: The documentation has been updated.
+0.9.1.1-0.9.1.2: The documentation has been updated.
